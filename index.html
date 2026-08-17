@@ -573,7 +573,7 @@
         // ============================================
         // 1. НАСТРОЙКА FORMPREE
         // ============================================
-        const FORMSPREE_URL = "https://formspree.io/f/xnpagvvb";
+        const FORMSPREE_URL = "https://formspree.io/f/maewplnj";
 
         // ============================================
         // 2. ОБРАБОТКА ФОРМЫ
@@ -637,7 +637,16 @@
             const surprise = document.getElementById('surprise').value.trim() || 'Не указано';
             const improve = document.getElementById('improve').value.trim() || 'Не указано';
 
-            return { department, tasks, curator, team, training, benefits, surprise, improve };
+            return {
+                "Отдел": department,
+                "Понятность задач (1-5)": tasks,
+                "Куратор (1-5)": curator,
+                "Часть команды (1-5)": team,
+                "Обучение и материалы (1-5)": training,
+                "Бенефиты": benefits,
+                "Что удивило": surprise,
+                "Что улучшить": improve
+            };
         }
 
         async function submitForm() {
